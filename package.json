@@ -1,13 +1,9 @@
 {
-  "name": "code-calc",
+  "name": "codelng",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
-  "bin": {
-    "code-calc": "./serve.ts",
-    "codelng": "./serve.ts"
-  },
   "scripts": {
     "serve": "ts-node serve.ts"
   },
