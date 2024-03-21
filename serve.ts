@@ -9,8 +9,13 @@ import {program} from "commander"
             .usage("[global options] command")
             .option("-c, --cwd <path>","当前工作目录", process.cwd())
             .option("-f, --files <files>","工作目录", '!(node_modules|.git|.idea|.DS_Store|dist|build|unit_test)/**/**')
+            .option("-v, --versions","版本信息")
             .parse()
         const options =  program.opts()
+        if(options.versions){
+            console.log(require('./package.json').version)
+            return
+        }
         let result = 0;
         await new BuildServe ({
             isOutInfo:false,
