@@ -1,10 +1,9 @@
 {
   "name": "codelng",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "serve.ts",
   "bin": "serve.ts",
-  "type": "module",
   "scripts": {
     "serve": "ts-node serve.ts"
   },

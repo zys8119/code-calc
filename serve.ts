@@ -1,7 +1,7 @@
-#!/usr/bin/env ts-node-esm
+#!/usr/bin/env ts-node
 import BuildServe, {TransformOptions} from "ts-node-build"
 import {program} from "commander"
-(async ()=>{
+;(async ()=>{
     try {
         program
             .showHelpAfterError()
@@ -12,7 +12,7 @@ import {program} from "commander"
             .parse()
         const options =  program.opts()
         let result = 0;
-        await new (BuildServe as any).default({
+        await new BuildServe ({
             isOutInfo:false,
             inputFiles:[options.files],
             isOutDir:false,
